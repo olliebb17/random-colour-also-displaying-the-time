@@ -1,0 +1,51 @@
+package currenttimework;
+
+import java.time.LocalDate;
+import java.time.LocalTime; 
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+public class Currenttimework {
+
+  
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int x = 0;
+        
+           
+        
+        
+        boolean time = true;
+        while(time==true){
+             int random = rand.nextInt(3);
+
+        LocalTime now = LocalTime.now();
+        String C0 = "\033[33m";
+        String C1 = "\033[31m";
+         String C2 = "\033[32m";
+         String C3 = "\033[0m";
+           
+           if (random == 1){
+                 System.out.println(C1 + now);
+             }
+             if (random == 2){
+                 System.out.println(C2 + now );
+             }
+             if (random == 3){
+                 System.out.println(C3 + now);
+             }
+             if (random == 0){
+                 System.out.println(C0 + now);
+             }
+
+        
+        try{
+            TimeUnit.SECONDS.sleep(1);
+           
+        }catch(Exception e){
+            
+        }
+        }
+        
+    }
+    
+}
